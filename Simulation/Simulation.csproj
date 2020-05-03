@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF7AE78B-3DF5-48F0-A9FC-E07C31072892}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Arkanoid_SFML</RootNamespace>
+    <AssemblyName>Arkanoid_SFML</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FireSharp, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="sfml-audio">
+      <HintPath>dll\sfml-audio.dll</HintPath>
+    </Reference>
+    <Reference Include="sfml-graphics">
+      <HintPath>lib\sfml-graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="sfml-system">
+      <HintPath>lib\sfml-system.dll</HintPath>
+    </Reference>
+    <Reference Include="sfml-window">
+      <HintPath>dll\sfml-window.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents\Car.cs" />
+    <Compile Include="Agents\CarAi.cs" />
+    <Compile Include="Agents\CarWill.cs" />
+    <Compile Include="Agents\Interfaces\ICarAI.cs" />
+    <Compile Include="Camera\Camera.cs" />
+    <Compile Include="CarConfiguration.cs" />
+    <Compile Include="CollisionData\Body.cs" />
+    <Compile Include="CollisionData\Collision.cs" />
+    <Compile Include="CollisionData\CollisionHelper.cs" />
+    <Compile Include="CollisionData\CollisionManager.cs" />
+    <Compile Include="CollisionData\CollisionType.cs" />
+    <Compile Include="CollisionData\Shapes\Circle.cs" />
+    <Compile Include="CollisionData\Shapes\IShape.cs" />
+    <Compile Include="CollisionData\Shapes\Polygon.cs" />
+    <Compile Include="CollisionData\Shapes\Rectangle.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Controllers\CameraController.cs" />
+    <Compile Include="Controllers\PidController.cs" />
+    <Compile Include="DataStructures\DrivingAction.cs" />
+    <Compile Include="DataStructures\Parameters.cs" />
+    <Compile Include="ECS\Components\AttachableComponent.cs" />
+    <Compile Include="ECS\Components\CollisionComponent.cs" />
+    <Compile Include="ECS\Components\DeathComponent.cs" />
+    <Compile Include="ECS\Components\DestructableComponent.cs" />
+    <Compile Include="ECS\Components\DroppableComponent.cs" />
+    <Compile Include="ECS\Components\GrabBallComponent.cs" />
+    <Compile Include="ECS\Components\PowerupComponent.cs" />
+    <Compile Include="ECS\Components\SplitBallComponent.cs" />
+    <Compile Include="ECS\Components\UnstoppableBallComponent.cs" />
+    <Compile Include="ECS\Entities\EntityType.cs" />
+    <Compile Include="ECS\Systems\DropSystem.cs" />
+    <Compile Include="ECS\Components\LaunchComponent.cs" />
+    <Compile Include="ECS\Components\MovementComponent.cs" />
+    <Compile Include="ECS\Components\PositionComponent.cs" />
+    <Compile Include="ECS\Components\ScreenBoundsEnforcerComponent.cs" />
+    <Compile Include="ECS\Components\SpriteComponent.cs" />
+    <Compile Include="ECS\Components\TextComponent.cs" />
+    <Compile Include="ECS\Components\UserInputComponent.cs" />
+    <Compile Include="ECS\Components\WallComponent.cs" />
+    <Compile Include="ECS\Entities\Entity.cs" />
+    <Compile Include="ECS\Entities\FontText.cs" />
+    <Compile Include="ECS\LeoEcs\EcsComponentMask.cs" />
+    <Compile Include="ECS\LeoEcs\EcsComponentPool.cs" />
+    <Compile Include="ECS\LeoEcs\EcsEntity.cs" />
+    <Compile Include="ECS\LeoEcs\EcsFilter.cs" />
+    <Compile Include="ECS\LeoEcs\EcsHelpers.cs" />
+    <Compile Include="ECS\LeoEcs\EcsInjections.cs" />
+    <Compile Include="ECS\LeoEcs\EcsSystems.cs" />
+    <Compile Include="ECS\LeoEcs\EcsWorld.cs" />
+    <Compile Include="ECS\Systems\AttachedSystem.cs" />
+    <Compile Include="ECS\Systems\CollisionSystem.cs" />
+    <Compile Include="ECS\Systems\DeathSystem.cs" />
+    <Compile Include="ECS\Systems\DestructionSystem.cs" />
+    <Compile Include="ECS\Systems\DebugRenderSystem.cs" />
+    <Compile Include="ECS\Systems\GrabBallSystem.cs" />
+    <Compile Include="ECS\Systems\Interfaces\IRenderSystem.cs" />
+    <Compile Include="ECS\Systems\LaunchSystem.cs" />
+    <Compile Include="ECS\Systems\PowerupSystem.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventManager.cs" />
+    <Compile Include="Events\Events.cs" />
+    <Compile Include="Events\IEntityEvent.cs" />
+    <Compile Include="Events\TestEvent.cs" />
+    <Compile Include="ExtensionMethods\RenderWindowExceptions.cs" />
+    <Compile Include="ExtensionMethods\Vector2fExtensions.cs" />
+    <Compile Include="ExtensionMethods\MathExtensions.cs" />
+    <Compile Include="Helpers\BrickCreationHelper.cs" />
+    <Compile Include="Helpers\MapHelper.cs" />
+    <Compile Include="Helpers\ParameterParser.cs" />
+    <Compile Include="Helpers\SFMLHelper.cs" />
+    <Compile Include="Helpers\WallCreationHelper.cs" />
+    <Compile Include="Managers\CheckpointManager.cs" />
+    <Compile Include="MapMaker.cs" />
+    <Compile Include="Maths\MathHelper.cs" />
+    <Compile Include="Scoring\FireBaseClient.cs" />
+    <Compile Include="Scoring\HighScore.cs" />
+    <Compile Include="Managers\ScoreManager.cs" />
+    <Compile Include="ECS\Systems\MovementSystem.cs" />
+    <Compile Include="ECS\Systems\ScreenBoundsEnforcerSystem.cs" />
+    <Compile Include="ECS\Systems\SpriteRenderSystem.cs" />
+    <Compile Include="ECS\Systems\TextRenderSystem.cs" />
+    <Compile Include="ECS\Systems\UserInputSystem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\ArkanoidGameScreen.cs" />
+    <Compile Include="Screens\CarSimulationScreen.cs" />
+    <Compile Include="Screens\GameHudScreen.cs" />
+    <Compile Include="Screens\HighScoreScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\Screen.cs" />
+    <Compile Include="Screens\ScreenManager.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="TimeTracker\Time.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GeneralGA\GeneralGA.csproj">
+      <Project>{E30A91E7-C0A7-4A9C-A81B-C8686006A879}</Project>
+      <Name>GeneralGA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)Resources\* $(ProjectDir)$(OutDir)
+copy $(ProjectDir)extlibs\* $(ProjectDir)$(OutDir)
+
+if not exist "$(ProjectDir)$(OutDir)SimData" mkdir "$(ProjectDir)$(OutDir)SimData"
+
+xcopy /s /y "$(ProjectDir)..\SimData"  "$(ProjectDir)$(OutDir)SimData"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

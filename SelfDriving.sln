@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworkGA", "NeuralNetwork\NeuralNetworkGA.csproj", "{DDE8D494-F56B-491B-98AC-1C9E2437D57E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralGA", "GeneralGA\GeneralGA.csproj", "{E30A91E7-C0A7-4A9C-A81B-C8686006A879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation", "Simulation\Simulation.csproj", "{CF7AE78B-3DF5-48F0-A9FC-E07C31072892}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDE8D494-F56B-491B-98AC-1C9E2437D57E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE8D494-F56B-491B-98AC-1C9E2437D57E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE8D494-F56B-491B-98AC-1C9E2437D57E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE8D494-F56B-491B-98AC-1C9E2437D57E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E30A91E7-C0A7-4A9C-A81B-C8686006A879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E30A91E7-C0A7-4A9C-A81B-C8686006A879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E30A91E7-C0A7-4A9C-A81B-C8686006A879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E30A91E7-C0A7-4A9C-A81B-C8686006A879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7AE78B-3DF5-48F0-A9FC-E07C31072892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7AE78B-3DF5-48F0-A9FC-E07C31072892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7AE78B-3DF5-48F0-A9FC-E07C31072892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7AE78B-3DF5-48F0-A9FC-E07C31072892}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91F4ADC0-145C-4659-90E3-40C492397123}
+	EndGlobalSection
+EndGlobal
